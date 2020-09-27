@@ -1,0 +1,1 @@
+Killer website project from Jonas Schmedtmann's "Build Responsive Real World Websites with HTML and CSS" course
