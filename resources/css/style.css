@@ -67,7 +67,7 @@ h2:after {
     display: block;
     height: 2px;
     background-color: #e67e22;
-    content: " "; /* Content must be specified with every after pseudoclass, but in this case we don't want words in there, so we leave it blank */
+    content: " "; /* Content must be specified with every after pseudoclass, but in this case we don't want words in there since it's just a line, so we leave it blank */
     width: 100px;
     margin: 0 auto;
     margin-top: 30px;
@@ -187,4 +187,51 @@ header {
 .main-nav li a:hover,
 .main-nav li a:active {
     border-bottom: 2px solid #e67e22; /* in order for this to work, the border has to exist before we actually hover over it, so it's transparent originally */
+}
+
+/*--------------------------------------------------*/
+/* FEATURES */
+/*--------------------------------------------------*/
+
+.section-features .long-copy {
+    margin-bottom: 30px;
+}
+
+/*--------------------------------------------------*/
+/* MEALS */
+/*--------------------------------------------------*/
+
+.section-meals {
+    padding: 0;
+}
+
+.meals-showcase {
+    list-style: none; /* removes list bullet points */
+    width: 100%; /* becomes the entire browser width */
+}
+
+.meals-showcase li {
+    display: block;
+    float: left; /* instead of them showing one by one, this gets them to be side by side */
+    width: 25%; /* width = 100%, so 25% * 4(images) = 100% */
+}
+
+.meal-photo {
+    width: 100%; /* says that this element has the exact width of its parent (which is .meals-showcase li) */
+    margin: 0;
+    overflow: hidden; /* Since the images are transformed to be bigger than their parent container, use this to make that part hidden */
+    background-color: #000; /* we now have a black container where the image is in */ 
+}
+
+.meal-photo img {
+    width: 100%; /* this is important, because this ensures the image is as wide as its container (the .meal-photo element) */
+    height: auto;
+    opacity: 0.7;
+    transform: scale(1.15); /* image will transform to be 115% bigger instead of 100% */
+    transition: transform 0.5s, opacity 0.5s; /* you can add multiple animations in one line */
+}
+
+.meal-photo img:hover {
+    opacity: 1;
+    transform: scale(1.03); /* 1 transforms it back to normal when hovering, but set to 1.03 in this instance */
 }
