@@ -189,6 +189,7 @@ header {
     background-size: cover; /* Ensures the entire image is showing, rather than being zoomed in on */
     background-position: center;
     height: 100vh; /* Covers 100% of the viewport */
+    background-attachment: fixed;
 }
 
 .hero-text-box{
@@ -342,4 +343,46 @@ header {
 
 .city-features {
     margin-bottom: 5px;
+}
+
+/*--------------------------------------------------*/
+/* TESTIMONIALS */
+/*--------------------------------------------------*/
+
+.section-testimonials {
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(img/back-customers.jpg);
+    background-size: cover; /* covers entire viewport */
+    background-attachment: fixed; /* effect where the image stays in the same place */
+    color: #fff;
+}
+
+blockquote {
+    padding: 2%;
+    font-style: italic; /* only able to do so because defined in html in the head section */
+    line-height: 145%;
+    position: relative;
+    margin-top: 40px;
+}
+
+blockquote:before { /*psuedoclass for content that appear before the text */
+    content:"\201C"; /* snippet from https://css-tricks.com/snippets/html/glyphs/ */
+    font-size: 500%;
+    display: block;
+    position: absolute; /* when you make an element absolute, make sure the parent has a relative position */
+    top: -5px;
+    left: -5px;
+}
+
+cite {
+    font-size: 90%;
+    margin-top: 25px;
+    display: block; /* forces a line berak */
+
+}
+
+cite img {
+    height: 45px;
+    margin-right: 10px;
+    border-radius: 50%;
+    vertical-align: middle; /* aligns images with text */
 }
