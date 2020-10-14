@@ -386,3 +386,61 @@ cite img {
     border-radius: 50%;
     vertical-align: middle; /* aligns images with text */
 }
+
+/*--------------------------------------------------*/
+/* SIGN UP */
+/*--------------------------------------------------*/
+
+.section-plans {
+    background-color: #f4f4f4;
+}
+
+.plan-box {
+    background-color: #fff;
+    border-radius: 5px;
+    width: 90%; /* because don't want it to be 100% of parent containter */
+    margin-left: 5%; /* to center it within container since "margin-right" takes the remaining 5% (width = 90%) */
+    box-shadow: 0 2px 2px #efefef; /* values in order: x-axis offset, y-axis offset, blur, color */
+}
+
+.plan-box div {
+    padding: 15px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.plan-box div:first-child {
+    background-color: #fcfcfc;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+}
+
+.plan-box div:last-child {
+    text-align: center; /* centers buttons, since they're the last child in .plan-box */
+    border: 0;
+}
+
+.plan-price {
+    font-size: 300%;
+    margin-bottom: 10px;
+    font-weight: 100;
+    color: #e67e22;
+}
+
+.plan-price span {
+    font-size: 30%; /* because it's a child element of .plan-price, it will be 30% of 300%, not the initial 20px declared with "html" */
+    font-weight: 300;
+}
+
+.plan-price-meal {
+    font-size: 80%;
+}
+
+.plan-box ul {
+    list-style: none;
+}
+
+.plan-box ul li {
+    padding: 5px 0px;
+
+}
