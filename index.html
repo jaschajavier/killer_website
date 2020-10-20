@@ -7,6 +7,7 @@
         <link href="vendors/css/normalize.css" type="text/css" rel="stylesheet">
         <link href="vendors/css/grid.css" type="text/css" rel="stylesheet">
         <link href="vendors/css/ionicons.min.css" type="text/css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet"/>
         <link href="resources/css/style.css" type="text/css" rel="stylesheet">
         <link href="resources/css/queries.css" type="text/css" rel="stylesheet"> <!-- Media queries work when placed after the style.css file -->
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet" type="text/css">
@@ -18,23 +19,24 @@
             <nav>
                 <div class="row">
                     <img src="resources/img/logo-white.png" alt="Omnifood logo" class="logo">
+                    <img src="resources/img/logo.png" alt="Omnifood logo" class="logo-black">
                     <ul class="main-nav">
-                        <li> <a href="#">Food delivery</a> </li>
-                        <li> <a href="#">How it works</a> </li>
-                        <li> <a href="#">Our cities</a> </li>
-                        <li> <a href="#">Sign up</a> </li>
+                        <li> <a href="#features">Food delivery</a> </li>
+                        <li> <a href="#works">How it works</a> </li>
+                        <li> <a href="#cities">Our cities</a> </li>
+                        <li> <a href="#plans">Sign up</a> </li>
                     </ul>
 
                 </div>
             </nav>
             <div class="hero-text-box">
                 <h1>Goodbye junk food.<br>Hello super healthy meals.</h1>
-                <a class="btn btn-full" href="#">I'm hungry</a>
-                <a class="btn btn-ghost" href="#">Show me more</a> <!-- To have multiple classes in one element, just put a space between them (ex. class= "btn btn-ghost")-->
+                <a class="btn btn-full js--scroll-to-plans" href="#">I'm hungry</a>
+                <a class="btn btn-ghost js--scroll-to-start" href="#">Show me more</a> <!-- To have multiple classes in one element, just put a space between them (ex. class= "btn btn-ghost")-->
             </div>
         </header>
 
-        <section class="section-features">
+        <section class="section-features js--section-features" id="features">
             <div class="row">
                 <h2>Get food fast &mdash; <!-- html entity for an em dash -->not fast food.</h2> <!--You only want to use <h1> once, so now we used <h2> -->
                 <p class="long-copy">
@@ -121,7 +123,7 @@
             </ul>
         </section>
 
-        <section class="section-steps">
+        <section class="section-steps" id="works">
             <div class="row">
                 <h2>How it works &mdash; Simple as 1, 2, 3</h2>
             </div>
@@ -149,7 +151,7 @@
             </div>
         </section>
 
-        <section class="section-cities">
+        <section class="section-cities" id="cities">
             <div class="row">
                 <h2>We're currently in these cities</h2>
             </div>
@@ -246,7 +248,7 @@
             </div>
         </section>
 
-        <section class="section-plans">
+        <section class="section-plans js--section-plans" id="plans">
             <div class="row">
                 <h2>Start eating healthy today</h2>
             </div>
@@ -401,5 +403,11 @@
                 </p>
             </div>
         </footer>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!-- Put JS scripts before the body tag closes, so they are only called after the web page is loaded -->
+        <script src="vendors/js/jquery.waypoints.min.js"></script>
+        <script src="resources/js/script.js"></script>
+
     </body>
+
 <html>
